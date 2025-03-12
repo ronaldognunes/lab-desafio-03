@@ -28,9 +28,14 @@ docker compose up -d
 ```
 docker exec -it labs-auction-goexpert-app-1 bash
 ```
+![acessar o container](assets/acessar_container_api.png)
 3 . Dentro do container da api executa o comando abaixo para executar o teste.
 ```
 go test ./internal/infra/database/auction/create_auction_test.go -json
 ```
+![executar teste ](assets/execucao_teste_fechamento_leilao.png)
 4 . O arquivo api/teste.http pode ser utilizando também para testar a criação do leilão e após o atingir o prazo de cancelamento que está definido no .env <b>AUCTION_INTERVAL</b>, consultar o Leilão para verificar o status.
 
+![arquivo http](assets/arquivo_http.png)
+![criando leilão](assets/criando_leilão.png)
+![consulta leilão](assets/consulta_leilao.png)
